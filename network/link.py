@@ -1,6 +1,5 @@
 from ProtocolStack.physical_layer.medium.copper import Copper
-# from ProtocolStack.physical_layer.fibre import Fibre
-# from ProtocolStack.physical_layer.wireless import Wireless
+
 import math
 
 class Link:

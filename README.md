@@ -12,6 +12,7 @@ Physical Layer
 ├── Transmission Delay
 ├── Attenuation
 ├── Noise
+├── Port
 ├── Interference
 ├── Collision Detection
 ├── Half/Full Duplex
