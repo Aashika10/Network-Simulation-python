@@ -39,7 +39,7 @@ class Channel:
     def propagate(self,signal,delta_time):
         self.apply_attenuation(signal,delta_time)
 
-        self.sender.stack.model.noise.apply(
+        self.sender.stack.get_layer("physical").noise.apply(
                 signal,
                 delta_time
             )

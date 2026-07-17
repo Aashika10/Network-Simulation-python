@@ -1,4 +1,6 @@
 
+from ProtocolStack.data_link_layer.data_link_layer import DataLinkLayer
+from ProtocolStack.physical_layer.physical_layer import PhysicalLayer
 from ProtocolStack.protocol_stack import ProtocolStack
 
 
@@ -22,13 +24,17 @@ class Node:
         self.stack = ProtocolStack(self)
 
 
-    def send(self, bits):
-        self.stack.model.send(bits)
+
+    def send(self, data):
+        print(f"Node {self.name} using TCP/IP model stack for sending data")
+        self.stack.send(data)
 
 
     def update(self):
-        self.stack.model.update()
+        self.stack.update()
 
 
     def receive(self,signal):
-        self.stack.model.receive(signal)
+        print(f"Node {self.name} using TCP/IP model stack for receiving data")
+        self.stack.receive(signal)
+       

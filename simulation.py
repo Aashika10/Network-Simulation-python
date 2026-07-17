@@ -15,19 +15,19 @@ class Simulation:
         
         A = Node("A", 100, 300)
         B = Node("B", 450, 120)
-        C = Node("C", 800, 300)
+        # C = Node("C", 800, 300)
 
         self.network.add_node(A)
         self.network.add_node(B)
-        self.network.add_node(C)
+        # self.network.add_node(C)
 
         self.network.connect(A, B)
-        self.network.connect(B, C)
-        self.network.connect(A, C)
+        # self.network.connect(B, C)
+        # self.network.connect(A, C)
 
 
     def start_demo(self):
-        self.network.nodes[0].send("00001111")
+        self.network.nodes[0].send("011111100111")
         # self.network.nodes[1].send("01010101")
        
 

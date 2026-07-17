@@ -45,7 +45,7 @@ class PhysicalLayer:
 
             waveform = self.encoder.encode(bit)
 
-            signal = Signal(sender=self.node, receiver=port.receiver,link=port.link ,waveform=waveform)
+            signal = Signal(sender=self.node, receiver=port.receiver,link=port.link ,waveform=waveform,bit_index=port.current_bit,total_bits=len(stream))
 
             self.node.network.add_signal(signal)
 
@@ -53,6 +53,11 @@ class PhysicalLayer:
 
     def receive(self, signal):
         bit = self.decoder.decode(signal.waveform)
+        
         self.receiver.receive(bit)
-        print("Power:",signal.power)
-        print(f"{self.node.name}: {self.receiver.get_data()}")
+        if signal.bit_index == signal.total_bits - 1:
+            bits = self.receiver.get_data()
+            self.receiver.clear()
+            return bits
+    
+            
