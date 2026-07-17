@@ -38,3 +38,26 @@ Physical Layer
      │          │           │
      ▼          ▼           ▼
  Copper      Fiber      Wireless
+
+Data Link Layer
+├── Frame
+├── MAC Address
+├── Frame Builder
+├── Frame Parser
+├── Framing
+├── Error Detection (Parity → Checksum → CRC)
+├── Flow Control
+├── ARQ
+├── MAC Protocols
+├── Switching Support
+└── LLC Interface
+
+data_link_layer/
+│
+├── frame.py
+├── mac_address.py
+├── frame_builder.py
+├── frame_parser.py
+├── data_link_layer.py
+├── frame_type.py
+└── constants.py

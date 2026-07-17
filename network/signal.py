@@ -2,8 +2,7 @@ from network.channel import Channel
 
 class Signal:
 
-    def __init__(self, sender, receiver, link, waveform):
-
+    def __init__(self, sender, receiver, link, waveform,bit_index,total_bits):
         self.sender = sender
         self.receiver = receiver
 
@@ -22,6 +21,9 @@ class Signal:
         self.noisy = False
         self.noise_power = 0.0
         self.channel=Channel(self.sender)
+
+        self.bit_index = bit_index
+        self.total_bits = total_bits
 
     def update(self, delta_time):
 
