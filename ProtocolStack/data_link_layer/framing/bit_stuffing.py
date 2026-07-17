@@ -25,9 +25,9 @@ class BitStuffing(Framing):
                 original+=bit
             else:
                 if count==5:
+                    count=0
                     continue
                 original+=bit
-                count=0
 
         return original
 

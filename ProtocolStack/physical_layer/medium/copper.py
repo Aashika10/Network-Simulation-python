@@ -11,11 +11,11 @@ class Copper(Medium):
 
         self.propagation_speed = 2e8 #simulation unit
 
-        self.noise_level = 0.1
+        self.noise_level = 0.5
 
         #   Thermal Noise
         #   Crosstalk
-        self.noise_amplitude = 2
+        self.noise_amplitude = 10
 
         # self.bandwidth = 100
         self.bit_rate  = 2
