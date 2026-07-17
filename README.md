@@ -61,3 +61,26 @@ data_link_layer/
 ├── data_link_layer.py
 ├── frame_type.py
 └── constants.py
+
+
+DataLinkLayer/
+│
+├── framing/
+│   ├── bit_stuffing.py
+│   └── byte_stuffing.py
+│
+├── error_detection/
+│   ├── parity.py
+│   ├── checksum.py
+│   └── crc.py
+│
+├── error_control/
+│   ├── stop_and_wait.py
+│   ├── go_back_n.py
+│   └── selective_repeat.py
+│
+├── flow_control/
+│   ├── stop_and_wait.py
+│   └── sliding_window.py
+│
+└── data_link_layer.py
